@@ -11,6 +11,7 @@ class ReceiptScene: UIViewController {
     
     @IBOutlet weak var table: ContentSizeTableView!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     var viewModel: ReceiptViewModel?
     
@@ -21,6 +22,7 @@ class ReceiptScene: UIViewController {
         table.dataSource = self
         
         totalLabel.text = "\(viewModel?.total ?? 0.0)"
+        dateLabel.text = viewModel?.orderTime
     }
     
     @IBAction func tappedShare(_ sender: Any) {

@@ -23,7 +23,13 @@ struct ReceiptViewModel {
         for item in items {
            message = "\(message)\(item.count) x \(item.name ?? "") \(item.totalPrice)\n"
         }
-        message = "\(message)Total \(total)"
+        message = "\(message)Total \(total)\n\(orderTime)"
         return message
+    }
+    
+    var orderTime: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        return dateFormatter.string(from: Date())
     }
 }

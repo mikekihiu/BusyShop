@@ -11,7 +11,7 @@ import XCTest
 final class BusyShopTests: XCTestCase {
 
     func testCartLogic() {
-        let viewModel = HomeViewModel()
+        let viewModel = CartViewModel()
         viewModel.dbFruits = [
             "APL883": ["description": "Apple", "image": "apple.jpg", "price": Float(5.0)],
             "COC378": ["description": "Coconut", "image": "coconut.jpg", "price": Float(14.0)],

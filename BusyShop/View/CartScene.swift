@@ -8,13 +8,13 @@
 import UIKit
 import BarcodeScanner
 
-class HomeScene: UIViewController {
+class CartScene: UIViewController {
     
     @IBOutlet weak var scanTable: UITableView!
     @IBOutlet weak var btnCheckOut: UIButton!
     @IBOutlet weak var tapToAddLabel: UILabel!
     
-    lazy var viewModel = HomeViewModel()
+    lazy var viewModel = CartViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class HomeScene: UIViewController {
     }
 }
 
-extension HomeScene: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
+extension CartScene: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
     
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         viewModel.addScannedFruit(code) { [weak self] in
@@ -78,7 +78,7 @@ extension HomeScene: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, Ba
     }
 }
 
-extension HomeScene: UITableViewDelegate, UITableViewDataSource {
+extension CartScene: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.scannedFruits.count

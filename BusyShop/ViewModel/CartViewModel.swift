@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseDatabase
 
-class HomeViewModel {
+class CartViewModel {
     
     var dbFruits: [String: Any]?
     var scannedFruits: [String: ScannedFruit] = [:]

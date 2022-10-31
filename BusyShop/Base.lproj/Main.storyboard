@@ -28,7 +28,7 @@
         <!--Cart-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeScene" customModule="BusyShop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CartScene" customModule="BusyShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="100.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PN-IX-KIY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="100.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PN-IX-KIY">
                                 <rect key="frame" x="318.33333333333331" y="226" width="41.666666666666686" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
@@ -168,11 +168,19 @@
                                     <action selector="tappedShare:" destination="jAY-Gy-Bfa" eventType="touchUpInside" id="e7J-KA-o92"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoM-g1-eGe">
+                                <rect key="frame" x="337.33333333333331" y="287" width="22.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eW1-TJ-AMG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FoM-g1-eGe" firstAttribute="trailing" secondItem="2PN-IX-KIY" secondAttribute="trailing" id="7DR-6b-Q4y"/>
                             <constraint firstItem="eW1-TJ-AMG" firstAttribute="bottom" secondItem="TCc-Em-WeM" secondAttribute="bottom" constant="16" id="EH5-rG-Gtk"/>
+                            <constraint firstItem="N07-dM-cI6" firstAttribute="top" secondItem="eW1-TJ-AMG" secondAttribute="top" constant="16" id="PRa-uv-tED"/>
                             <constraint firstItem="2PN-IX-KIY" firstAttribute="top" secondItem="N07-dM-cI6" secondAttribute="bottom" constant="8" symbolic="YES" id="Rii-v1-KTG"/>
                             <constraint firstItem="eGI-MI-Lcq" firstAttribute="leading" secondItem="eW1-TJ-AMG" secondAttribute="leading" constant="30" id="WIi-Rm-13i"/>
                             <constraint firstItem="TCc-Em-WeM" firstAttribute="centerX" secondItem="eW1-TJ-AMG" secondAttribute="centerX" id="XEH-JT-sJ9"/>
@@ -180,11 +188,12 @@
                             <constraint firstItem="eW1-TJ-AMG" firstAttribute="trailing" secondItem="2PN-IX-KIY" secondAttribute="trailing" constant="30" id="iLI-D6-WVA"/>
                             <constraint firstItem="eW1-TJ-AMG" firstAttribute="trailing" secondItem="N07-dM-cI6" secondAttribute="trailing" constant="16" id="ndA-Ey-BM5"/>
                             <constraint firstItem="eGI-MI-Lcq" firstAttribute="top" secondItem="N07-dM-cI6" secondAttribute="bottom" constant="8" symbolic="YES" id="vgs-ap-AmN"/>
-                            <constraint firstItem="N07-dM-cI6" firstAttribute="top" secondItem="eW1-TJ-AMG" secondAttribute="top" constant="16" id="yS6-lB-wHk"/>
+                            <constraint firstItem="FoM-g1-eGe" firstAttribute="top" secondItem="2PN-IX-KIY" secondAttribute="bottom" constant="8" id="voe-f1-8De"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Receipt" id="skX-L9-auG"/>
                     <connections>
+                        <outlet property="dateLabel" destination="FoM-g1-eGe" id="Taa-lO-Hwu"/>
                         <outlet property="table" destination="N07-dM-cI6" id="dZ2-xA-Nfx"/>
                         <outlet property="totalLabel" destination="2PN-IX-KIY" id="UaZ-0F-Kih"/>
                     </connections>

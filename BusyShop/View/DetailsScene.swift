@@ -22,6 +22,6 @@ class DetailsScene: UIViewController {
         guard let viewModel = viewModel else { return }
         imageView.sd_setImage(with: viewModel.imageRef, placeholderImage: UIImage(systemName: "photo.on.rectangle"))
         nameLabel.text = viewModel.item.name
-        priceLabel.text = "Price \(viewModel.item.price)"
+        priceLabel.text = String(format: "price".localized(), String(viewModel.item.price))
     }
 }
