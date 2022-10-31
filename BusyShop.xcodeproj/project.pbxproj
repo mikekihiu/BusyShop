@@ -111,6 +111,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275AEE39290FB2C000660880 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				276914DB290A6821005F88AE /* AppDelegate.swift */,
+				276914DD290A6821005F88AE /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		275AEE3A290FB40C00660880 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				275AEE3B290FB43300660880 /* Plist */,
+				276914E1290A6821005F88AE /* Main.storyboard */,
+				276914E4290A6822005F88AE /* Assets.xcassets */,
+				276914E6290A6822005F88AE /* LaunchScreen.storyboard */,
+				275AEE35290FA74F00660880 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		275AEE3B290FB43300660880 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				2769150B290A6D14005F88AE /* GoogleService-Info.plist */,
+				276914E9290A6822005F88AE /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
 		276914CF290A6821005F88AE = {
 			isa = PBXGroup;
 			children = (
@@ -139,14 +169,8 @@
 				27691511290A7412005F88AE /* View */,
 				27691510290A7404005F88AE /* ViewModel */,
 				2769150D290A7132005F88AE /* Model */,
-				2769150B290A6D14005F88AE /* GoogleService-Info.plist */,
-				276914DB290A6821005F88AE /* AppDelegate.swift */,
-				276914DD290A6821005F88AE /* SceneDelegate.swift */,
-				276914E1290A6821005F88AE /* Main.storyboard */,
-				276914E4290A6822005F88AE /* Assets.xcassets */,
-				276914E6290A6822005F88AE /* LaunchScreen.storyboard */,
-				276914E9290A6822005F88AE /* Info.plist */,
-				275AEE35290FA74F00660880 /* Localizable.strings */,
+				275AEE39290FB2C000660880 /* AppDelegate */,
+				275AEE3A290FB40C00660880 /* Resources */,
 			);
 			path = BusyShop;
 			sourceTree = "<group>";
@@ -660,7 +684,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 445NVAG6HL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BusyShop/Info.plist;
+				INFOPLIST_FILE = BusyShop/Resources/Plist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -689,7 +713,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 445NVAG6HL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BusyShop/Info.plist;
+				INFOPLIST_FILE = BusyShop/Resources/Plist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
